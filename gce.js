@@ -25,57 +25,52 @@ class Display {
         lock (bool)
     }
 
-    putPixel( x, y, color ) { 
-        let canvas = document.querySelector("#canvas");
-        let ctx = canvas.getContext("2d");
-        ctx.moveTo(x, y);
-        ctx.fillStyle = color;
+    putPixel(x, y, color) {
+        this.plane[y*this.width+x] = color;
         return;
     }
 
-    line( x1, y1, x2, y2, color ) { 
-        let canvas = document.querySelector("#canvas");
-        let ctx = canvas.getContext("2d");
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.fillStyle = color;
-        ctx.stroke();
+    line(x1, y1, x2, y2, color) { 
+        plane.moveTo(x1, y1);
+        plane.lineTo(x2, y2);
+        plane.fillStyle = color;
+        plane.stroke();
         return;
     }
 
-    circle( x, y, r, color ) {
-        let canvas = document.querySelector("#canvas");
-        let ctx = canvas.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(x, y, r, 0, 2 * Math.PI);
-        ctx.fillStyle = color;
-        ctx.stroke();
+    circle(x, y, r, color) {
+        plane.beginPath();
+        plane.arc(x, y, r, 0, 2 * Math.PI);
+        plane.fillStyle = color;
+        plane.stroke();
         return;
     }
 
-    rectangle( x1, y1, x2, y2, color ) { 
-        let canvas = document.querySelector("#canvas");
-        let ctx = canvas.getContext("2d");
-        ctx.fillStyle = color;
-        ctx.fillRect = (x1, y1, x2, y2);
+    rectangle(x1, y1, x2, y2, color) { 
+        plane.fillRect(x1, y1, x2, y2);
+        plane.fillStyle = color;
         return;
     }
 
-    clear( color ) { 
-        color = rgb(0, 0, 0);
-        return;
+    clear(color) { 
+        if(color > 255 || color < 0) { 
+            alert("color range error");
+            return;
+        }
+
+        for (let i = 0; i<this.width*this.height; i++) {
+            this.plane[i] = color;
+            return;
+        }
     }
 
-    resize( x, y ) { 
-    let canvas = document.getElementById('canvas'),
-    context = canvas.getContext('2d');
-
+    resize(x, y) { 
     // Event handler to resize the canvas when the document view is changed
     window.addEventListener('resize', resizeCanvas, false);
 
     function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    plane.width = window.innerWidth;
+    plane.height = window.innerHeight;
 
     // Redraw everything after resizing the window
     draw(); 
@@ -118,4 +113,8 @@ class Display {
     pscrollDown() { 
         return;
     }
+}
+
+render(); {
+    return;
 }
