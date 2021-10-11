@@ -58,6 +58,6 @@ function RenderInputs(func)
 
     for (let i = 0; i < arr[func].length; i++)
     {
-        el.innerHTML += `<input name="${elements[arr[func][i]].name}" placeholder="${elements[arr[func][i]].placeholder}" type="${elements[arr[func][i]].type}">`;
+        el.innerHTML += `<input class="input" name="${elements[arr[func][i]].name}" placeholder="${elements[arr[func][i]].placeholder}" type="${elements[arr[func][i]].type}">`;
     }
 }
