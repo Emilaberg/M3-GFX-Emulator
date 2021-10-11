@@ -9,13 +9,17 @@ html,
 body {
     height: 100%;
 
-    background-color: black;
+    background-color: ghostwhite;
 
     font-family: 'Poppins';
 }
 
 .canvas {
-    background-color: red;
+    border: 1px solid gray;
+    background-color: white;
+    height: 60vh;
+    width: 98%;
+    margin: 1% auto;
 }
 
 .controls {
