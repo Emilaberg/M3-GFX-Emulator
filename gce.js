@@ -3,8 +3,8 @@
 
 const canvas = document.querySelector("#canvas");
 
-canvas.width = window.innerWidth-100;
-canvas.height = window.innerWidth-100;
+canvas.width = window.innerWidth - 100;
+canvas.height = window.innerWidth/3;
 
 let plane = canvas.getcontext('2d');
 for (let i = 0; i < 6; i++) {

@@ -14,18 +14,22 @@ body {
     font-family: 'Poppins';
 }
 
+.view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .canvas {
     border: 1px solid gray;
     background-color: white;
-    height: 60vh;
-    width: 98%;
     margin: 1% auto;
 }
 
 .controls {
     background-color: ghostwhite;
 
-    padding: 2rem;
+    padding: 4rem;
 
     display: flex;
     flex-direction: column;
