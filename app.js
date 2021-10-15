@@ -47,6 +47,10 @@ let arr = [
     [ 'X1', 'Y2', 'X2', 'Y2', 'COLOR' ],
     // Text
     [ 'X1', 'Y1', 'TEXT', 'COLOR' ],
+    // Resize
+    [ 'X1', 'Y1'],
+    // Clear
+    ['COLOR'],
 ];
 
 

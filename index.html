@@ -7,6 +7,7 @@
 
     <title>Graphical Display Emulator</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,12 +29,12 @@
                     <a onclick="RenderInputs(4);"><i class="fas fa-text"></i> Text</a>
                 </div>
                 <div class="buttons">
-                    <a href=""><i class="fas fa-paint-brush"></i> Render</a>
-                    <a href=""><i class="far fa-crop-alt"></i> Resize</a>
-                    <a href=""><i class="fas fa-exchange"></i> Preserve</a>
-                    <a href=""><i class="fas fa-trash"></i> Clear</a>
+                    <a onclick="getValues()"><i class="fas fa-paint-brush"></i> Render</a>
+                    <a onclick="RenderInputs(5);"><i class="far fa-crop-alt"></i> Resize</a>
+                    <a onclick="RenderInputs(6);"><i class="fas fa-trash"></i> Clear</a>
                 </div>
                 <div class="buttons">
+                    <a href=""><i class="fas fa-exchange"></i> Preserve</a>
                     <a href="">Scroll Up</a>
                     <a href="">Scroll Down</a>
                     <a href="">Scroll Left</a>
