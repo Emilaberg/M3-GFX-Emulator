@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Graphical Display Emulator</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,11 +20,11 @@
         <div class="controls">
             <div class="section">
                 <div class="buttons">
-                    <a onclick="RenderInputs(0);"><i class="fas fa-square-full"></i> Pixel</a>
-                    <a onclick="RenderInputs(1);"><i class="fas fa-horizontal-rule"></i> Line</a>
-                    <a onclick="RenderInputs(2);"><i class="far fa-circle"></i> Circle</a>
-                    <a onclick="RenderInputs(3);"><i class="far fa-rectangle-wide"></i> Rectangle</a>
-                    <a onclick="RenderInputs(4);"><i class="fas fa-text"></i> Text</a>
+                    <a onclick="RenderInputs(0);" id="pixel"><i class="fas fa-square-full"></i> Pixel</a>
+                    <a onclick="RenderInputs(1);" id="line"><i class="fas fa-horizontal-rule"></i> Line</a>
+                    <a onclick="RenderInputs(2);" id="circle"><i class="far fa-circle"></i> Circle</a>
+                    <a onclick="RenderInputs(3);" id="Rectangle"><i class="far fa-rectangle-wide"></i> Rectangle</a>
+                    <a onclick="RenderInputs(4);" id="text"><i class="fas fa-text"></i> Text</a>
                 </div>
                 <div class="buttons">
                     <a onclick="getValues()"><i class="fas fa-paint-brush"></i> Render</a>

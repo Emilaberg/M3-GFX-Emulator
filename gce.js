@@ -1,19 +1,7 @@
-// Testing many snippets of code, 
-// adjustments necessary for the program to work would be implemented in a later version.
-
 const canvas = document.querySelector("#canvas");
 
 canvas.width = window.innerWidth - 100;
 canvas.height = window.innerWidth/3;
-
-let plane = canvas.getContext('2d');
-for (let i = 0; i < 6; i++) {
-    for (let j = 0; j < 6; j++) {
-        plane.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                        Math.floor(255 - 42.5 * j) + ', 0)';
-        plane.fillRect(j * 25, i * 25, 25, 25);
-    }
-}
 
 class Display {
 
@@ -121,8 +109,8 @@ class Display {
 
 function getValues() {
     var inputs = document.getElementsByClassName( 'input' ),
-    names  = [].map.call(inputs, function( input ) {
+    values  = [].map.call(inputs, function( input ) {
         return input.value;
     })
-    console.log(names);
+    console.log(values);
 }
