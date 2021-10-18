@@ -86,18 +86,11 @@ class Display {
     }
 
     scrollLeft() {
-        for(let y = 0; y < this.height; y++){
-            for( let x = 1; x < this.width; x++) 
-                this.plane[y*this.width+x-1] = this.plane[y*this.width+x];
-        }
+        
     }
 
     scrollRight() {
-        for(let y = 0; y < this.height; y++) {
-            for( let x = 0; x < this.width; x++) {
-                this.plane[y*this.width-x+1] = this.plane[y*this.width-x];
-            }
-        }
+        
     }
 
     scrollUp() {
