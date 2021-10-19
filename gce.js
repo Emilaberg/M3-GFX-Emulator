@@ -98,6 +98,25 @@ class Display {
 
     textOut(x, y, color, string) {
 
+        const FONT_WIDTH = 5;
+
+        for(let i = 0; i < string.length; i++) {
+            
+            let char = string[i];
+            let charPixels = chars[char]
+            
+            for (let j = 0; j < charPixels.length; j++) {
+
+                const charHasPixel = charPixels[j];
+                const charRow = Math.floor(j / FONT_WIDTH);
+                const charCol = j % FONT_WIDTH;
+
+                if(charHasPixel) {
+                    this.plane[this.width * (y + charRow) + (x + charCol + i * (FONT_WIDTH + 1))] = color
+                }
+
+            }
+        }
     }
 
     scrollLeft() {
@@ -186,6 +205,7 @@ class Display {
 }
 
 let display = new Display();
+
 function render() {
     // Determine Zoom:
     let xZoom = Math.round(canvas.width / display.width);
