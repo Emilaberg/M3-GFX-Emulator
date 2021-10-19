@@ -1,25 +1,25 @@
 // C
 function c(x, y, w, h, color) {
     // Outer line top - ─
-    display.line(x + 0, y + 0, x + w, y, color || 255)
+    display.line(x + 0, y + 0, x + w, y, color || 0)
 
     // Outer line left - |
-    display.line(x + 0, y + 0, x + 0, y + h * (100 / 110), color || 255)
+    display.line(x + 0, y + 0, x + 0, y + h * (100 / 110), color || 0)
 
     // Outer line bottom - |
-    display.line(x + 0, y + 0, x + 0, y + h * 1, color || 255)
+    display.line(x + 0, y + 0, x + 0, y + h * 1, color || 0)
 
     // Outer line bottom - ─
-    display.line(x + w * (10 / 100), y + h * (100 / 110), x + w, y + h * (100 / 110), color || 255)
+    display.line(x + w * (10 / 100), y + h * (100 / 110), x + w, y + h * (100 / 110), color || 0)
 
     // Inner line top - ─
-    display.line(x + w * (10 / 100), y + h * (10 / 110), x + w, y + h * (10 / 110), color || 255)
+    display.line(x + w * (10 / 100), y + h * (10 / 110), x + w, y + h * (10 / 110), color || 0)
 
     // Inner line - |
-    display.line(x + w * (10 / 100), y + h * (10 / 110), x + w * (10 / 100), y + h * (100 / 110), color || 255)
+    display.line(x + w * (10 / 100), y + h * (10 / 110), x + w * (10 / 100), y + h * (100 / 110), color || 0)
 
     // Inner line bottom - ─
-    display.line(x + 0, y + h, x + w, y + h, color || 255)
+    display.line(x + 0, y + h, x + w, y + h, color || 0)
 
 }
 
@@ -47,22 +47,22 @@ function a(x, y, w, h) {
     }
 
     // Outer line - /
-    line(120, 110, 170, 0, 255)
+    line(120, 110, 170, 0, 0)
 
     // Outer line - \
-    line(170, 0, 220, 110, 255)
+    line(170, 0, 220, 110, 0)
 
     // Inner line - /
-    line(130, 110, 170, 20, 255)
+    line(130, 110, 170, 20, 0)
 
     // Inner line - \
-    line(170, 20, 210, 110, 255)
+    line(170, 20, 210, 110, 0)
 
     // Outer line - ─
-    line(150, 65, 188, 65, 255)
+    line(150, 65, 188, 65, 0)
 
     // Inner line - ─
-    line(155, 55, 188, 55, 255)
+    line(155, 55, 188, 55, 0)
 }
 
 
@@ -89,25 +89,25 @@ function n(x, y, w, h) {
     }
 
     // Outer line left - |
-    line(240, 110, 240, 0, 255)
+    line(240, 110, 240, 0, 0)
     
     // Outer line middle - \
-    line(240, 0, 340, 110, 255)
+    line(240, 0, 340, 110, 0)
     
     // Outer line right - |
-    line(340, 110, 340, 0, 255)
+    line(340, 110, 340, 0, 0)
     
     // Inner line bottom - |
-    line(250, 110, 250, 30, 255)
+    line(250, 110, 250, 30, 0)
     
     // Inner line bottom - \
-    line(250, 30, 330, 110, 255)
+    line(250, 30, 330, 110, 0)
     
     // Inner line top - |
-    line(330, 0, 330, 85, 255)
+    line(330, 0, 330, 85, 0)
     
     // Inner line top - \
-    line(330, 85, 250, 0, 255)
+    line(330, 85, 250, 0, 0)
 
 }
 
@@ -135,16 +135,16 @@ function v(x, y, w, h) {
     }
 
     // Outer line - \
-    line(360, 0, 410, 110, 255)
+    line(360, 0, 410, 110, 0)
 
     // Outer line - /
-    line(410, 110, 460, 0, 255)
+    line(410, 110, 460, 0, 0)
 
     // Inner line - \
-    line(370, 0, 410, 93, 255)
+    line(370, 0, 410, 93, 0)
 
     // Inner line - /
-    line(410, 93, 450, 0, 255)
+    line(410, 93, 450, 0, 0)
 }
 
 
@@ -171,37 +171,37 @@ function s(x, y, w, h) {
     }
 
     // Outer line top - ─
-    line(680, 0, 600, 0, 255)
+    line(680, 0, 600, 0, 0)
 
     // Outer line top - |
-    line(600, 0, 600, 55, 255)
+    line(600, 0, 600, 55, 0)
 
     // Outer line middle - ─
-    line(600, 55, 680, 55, 255)
+    line(600, 55, 680, 55, 0)
 
     // Outer line bottom - |
-    line(680, 55, 680, 110, 255)
+    line(680, 55, 680, 110, 0)
 
     // Outer line bottom - ─
-    line(680, 110, 600, 110, 255)
+    line(680, 110, 600, 110, 0)
 
     // Inner line top - ─
-    line(680, 10, 610, 10, 255)
+    line(680, 10, 610, 10, 0)
 
     // Inner line top - |
-    line(610, 10, 610, 45, 255)
+    line(610, 10, 610, 45, 0)
 
     // Inner line middle top - ─
-    line(610, 45, 670, 45, 255)
+    line(610, 45, 670, 45, 0)
 
     // Inner line middle bottom - ─
-    line(610, 65, 670, 65, 255)
+    line(610, 65, 670, 65, 0)
 
     // Inner line bottom - |
-    line(670, 65, 670, 100, 255)
+    line(670, 65, 670, 100, 0)
 
     // Inner line bottom - ─
-    line(670, 100, 600, 100, 255)
+    line(670, 100, 600, 100, 0)
 }
 
 function writeCanvas(x, y, w = 680, h = 110) {
