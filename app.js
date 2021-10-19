@@ -47,6 +47,10 @@ let arr = [
     [ 'X1', 'Y2', 'X2', 'Y2', 'COLOR' ],
     // Text
     [ 'X1', 'Y1', 'TEXT', 'COLOR' ],
+    // Resize
+    [ 'X1', 'Y1'],
+    // Clear
+    ['COLOR'],
 ];
 
 
@@ -60,4 +64,12 @@ function RenderInputs(func)
     {
         el.innerHTML += `<input class="input" name="${elements[arr[func][i]].name}" placeholder="${elements[arr[func][i]].placeholder}" type="${elements[arr[func][i]].type}">`;
     }
+}
+
+function getValues() {
+    var inputs = document.getElementsByClassName( 'input' ),
+    names  = [].map.call(inputs, function( input ) {
+        return input.value;
+    })
+    console.log(names);
 }

@@ -105,11 +105,11 @@ class Display {
     }
 
     scrollLeft() {
-
+        
     }
 
     scrollRight() {
-
+        
     }
 
     scrollUp() {
@@ -117,11 +117,15 @@ class Display {
     }
 
     scrollDown() {
-
+        
     }
 
     pscrollLeft() {
-
+        for(let y = 0; y < this.height; y++) {
+            for( let x = 0; x < this.width; x++) {
+                this.plane[y*this.width+x-1] = this.plane[y*this.width+x];
+            }
+        }
     }
 
     pscrollRight() {
@@ -138,6 +142,7 @@ class Display {
 }
 
 let display = new Display();
+
 function render() {
     let xZoom = Math.round(canvas.width / display.width);
     let yZoom = Math.round(canvas.height / display.height);
